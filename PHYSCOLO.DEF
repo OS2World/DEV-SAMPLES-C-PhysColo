@@ -1,0 +1,6 @@
+NAME    PHYSCOLO WINDOWAPI
+
+DESCRIPTION 'Displays physical screen colors'
+
+PROTMODE
+STACKSIZE       0x8000

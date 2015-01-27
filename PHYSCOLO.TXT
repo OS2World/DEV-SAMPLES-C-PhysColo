@@ -1,0 +1,51 @@
+PHYSCOLO.DOC
+
+PhysColo version 2.0 and its source code are copyright (c) 1992, 1993
+by Raja Thiagarajan and Peter Nielsen. However, you may use them for
+any non-commercial purpose.
+
+To run the program, simply type "physcolo" at an OS/2 prompt. The
+program requires the Palette Manager in order to work properly. If you
+run the program and its title reads "Physical Color Viewer," then the
+colors you see are the physical ones on your screen. If the word
+"Physical" is missing from the title, then the Palette Manager is NOT
+available in your current screen mode. You will see color bars
+representing the CLR_* constants at the left; I don't know what the
+rest of the window will show.
+
+The program will display either as many onscreen colors as you have
+or 256, whichever is LESS.
+
+The primary goal of earlier versions of this program was to demonstrate
+how to use the Palette Manager to access the physical screen colors in
+a device-independent way. In writing the code, I strived for maximum
+clarity rather than clever hacks. However, since I've documented this
+matter in my "Unofficial Guide to the Palette Manager" article, and
+since most people seem to use PhysColo itself rather than study its
+source code, this version puts a slightly greater emphasis on speed
+rather than clarity.
+
+NOTE: Previous versions of this program had a dangerous bug!
+Specifically, when I queried for the existence of Palette Manager, I
+used -- and did not release -- a handle to the screen PS. Under OS/2
+2.0, this was harmless. Under 2.1, it can cause screen corruption,
+requiring you to reboot the system. PLEASE DO NOT USE VERSIONS OF
+PHYSCOLO PRIOR TO THIS ONE!
+
+The program should compile equally well under IBM C Set/2 (or CSet++)
+and Watcom C 386 9.0 (or greater). If you have to modify it to compile
+under other C compilers for OS/2 2.0, I'd appreciate knowing about it.
+Of course, the program cannot be compiled for OS/2 1.x because Palette
+Manager is a 2.x feature.
+
+If you have any questions or comments, contact me at
+
+   sthiagar@nickel.ucs.indiana.edu (internet)
+
+Peter Nielsen did all the hard work to speed this program up under OS/2
+2.1. He can be reached at
+
+   pnielsen@finabo.abo.fi.
+
+Raja Thiagarajan
+(sthiagar@bronze.ucs.indiana.edu)
